@@ -31,7 +31,7 @@ public class Dog extends Pet {
         System.out.println(number + " " + voice);
     }
     public String getInfo(){
-        System.out.println("Возвраст: " + getAge() + "\n" + "Цвет: " + color + "\n" + "Приют: " + shelter + "\n" + "Имя: " + name + "\n" + "Порода: " + breed + "\n" + "Команды: " + commands);
+        System.out.println("Возвраст: " + getAge() + "\n" + "Цвет: " + color + "\n" + "Приют: " + shelter + "\n" + "Имя: " + name + "\n" + "Порода: " + breed + "\n" + "Команды: " + commands + "\n");
         return toString();
     }
 }
