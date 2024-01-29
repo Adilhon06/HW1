@@ -24,7 +24,7 @@ public class Dog extends Pet {
         this.commands = commands;
     }
 
-    void makeVoice(String voice, int number) {
+    void makeVoice(String voice, int number) { // make voice
         System.out.println(voice + " " + number);
     }
     void makeVoice(int number, String voice){
