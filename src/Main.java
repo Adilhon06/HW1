@@ -1,10 +1,14 @@
 public class Main {
-    public static void main(String[] args) {
-        Pet dog1 = new Dog("Рекс", "Лабрадор", 3);
-        Pet dog2 = new Dog("Тузик", "Кантек", Color.WHITE, "For pets");
-        Pet dog3 = new Dog("Хатико", "Киба-Ину", Color.BROWN, "Found Friend For You", 5);
+    public static void main(String[] args){
+        Dog dog = new Dog("Тузик", "Кантек", 4);
+        Dog dog2 = new Dog("Грозный", "Питбуль", Color.BROWN, new Shelter("Свободу Животным", "Кожлбердиева 103"));
+        Dog dog3 = new Dog("Грозный", "Питбуль", Color.BROWN, new Shelter("Свободу Животным", "Кожлбердиева 103"), 3);
 
-        dog1.getInfo();
+        dog.makeVoice(1, "Woah - Woah");
+        dog2.makeVoice(2,"Gav - Gav" );
+        dog3.makeVoice(3, "Viv - Viv");
+
+        dog.getInfo();
         dog2.getInfo();
         dog3.getInfo();
     }

@@ -1,10 +1,10 @@
 public class Pet {
-    protected int age;
-    protected Color color;
-    protected String shelter;
+    private int age;
+    private Color color;
+    private Shelter shelter;
 
     public int getAge() {
-        return generateDefaultAge();
+        return age;
     }
 
     public void setAge(int age) {
@@ -15,22 +15,24 @@ public class Pet {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = Color.valueOf(color);
+    public void setColor(Color color) {
+        this.color = color;
     }
 
-    public String getShelter() {
+    public Shelter getShelter() {
         return shelter;
     }
 
-    public void setShelter(String shelter) {
+    public void setShelter(Shelter shelter) {
         this.shelter = shelter;
     }
+
     private int generateDefaultAge(){
         age = 2;
         return age;
     }
-    public String getInfo(){
-        return age + " " + color + " " + shelter;
+
+    protected String getInfo(){
+        return "Возвраст: " + age + "\n " + "Цвет: " + color + "\n " + "Приют " + shelter;
     }
 }

@@ -1,15 +1,17 @@
 public enum Color {
+
     BLACK("Черный"),
     WHITE("Белый"),
-    GREY("Серый"),
+    GRAY("Серый"),
     BROWN("Коричневый");
 
-    private String title;
+    private final String title;
+
     Color(String title){
         this.title = title;
     }
 
-    private String getTitle(){
+    public String getTitle() {
         return title;
     }
 }

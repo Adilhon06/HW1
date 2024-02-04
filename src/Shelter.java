@@ -1,13 +1,13 @@
 public class Shelter {
-    private String name;
-    private String address;
-
-    public String getAddress() {
-        return address;
-    }
+    private final String name;
+    private final String address;
 
     public String getName() {
-        return name;
+        return "Название приюта: " + name;
+    }
+
+    public String getAddress() {
+        return "Адрес: " + address;
     }
 
     public Shelter(String name, String address) {

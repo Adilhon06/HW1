@@ -1,7 +1,32 @@
-public class Dog extends Pet {
+public final class Dog extends Pet{
+
     private String name;
     private String breed;
     private int commands;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public int getCommands() {
+        return commands;
+    }
+
+    public void setCommands(int commands) {
+        this.commands = commands;
+    }
 
     public Dog(String name, String breed, int commands) {
         this.name = name;
@@ -9,29 +34,31 @@ public class Dog extends Pet {
         this.commands = commands;
     }
 
-    public Dog(String name, String breed, Color color, String shelter) {
+    public Dog(String name, String breed, Color color, Shelter shelter){
         this.name = name;
         this.breed = breed;
-        this.color = color;
-        this.shelter = shelter;
+        setColor(color);
+        setShelter(shelter);
     }
 
-    public Dog(String name, String breed, Color color, String shelter, int commands) {
+    public Dog(String name, String breed, Color color, Shelter shelter, int commands){
         this.name = name;
         this.breed = breed;
-        this.color = color;
-        this.shelter = shelter;
+        setColor(color);
+        setShelter(shelter);
         this.commands = commands;
     }
 
-    void makeVoice(String voice, int number) { // make voice
-        System.out.println(voice + " " + number);
+    void makeVoice(String voice, int number){
+        System.out.println("Голос: " + voice + "\n" + "Номер: " + number);
     }
+
     void makeVoice(int number, String voice){
-        System.out.println(number + " " + voice);
+        System.out.println("Номер: " + number + "\n" + "Голос: " + voice);
     }
-    public String getInfo(){
-        System.out.println("Возвраст: " + getAge() + "\n" + "Цвет: " + color + "\n" + "Приют: " + shelter + "\n" + "Имя: " + name + "\n" + "Порода: " + breed + "\n" + "Команды: " + commands + "\n");
-        return toString();
+
+    @Override
+    protected String getInfo() {
+        return super.getInfo() + "\n" + "Name: " + name + "\n" + "Breed" + breed + "\n" + "Commands: " + commands;
     }
 }
